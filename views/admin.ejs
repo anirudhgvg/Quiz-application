@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Easy Math Quiz - Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+        .other-color{
+            background: SteelBlue  ;
+            color:white;
+        }
+        th,tr,td{
+            text-align:center
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="jumbotron other-color">
+            <h1>Easy Math Quiz</h1>
+        </div>   
+    </div>
+
+    <div class="container-fluid" style="padding-left:80px">
+        <h3>Welcome Admin!!</h3>
+  	<div class="col-sm-offset-10 col-sm-2">
+                    <a href="/logout" class="btn btn-primary">Logout</a>
+        </div>
+        <div style="height:40px"></div>
+        <table class="table table-condensed table-bordered" style="width:75%" >
+            <caption style="text-align:center;color:black">Individual performance of Users</caption>
+    <thead>
+        <tr>
+        <th>Username</th>
+        <th colspan="2">Question 1</th>
+        <th colspan="2">Question 2</th>
+        <th colspan="2">Question 3</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>Answer</th>
+        <th>Feedback</th>
+        <th>Answer</th>
+        <th>Feedback</th>
+        <th>Answer</th>
+        <th>Feedback</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% for (var i = 0; i < sample.length ; i++) { %>
+        <tr>
+        <td><%=sample[i].name%></td>
+        <td><%=sample[i].answers[0]%></td>
+        <td><%=sample[i].feedback[0]%></td>
+        <td><%=sample[i].answers[1]%></td>
+        <td><%=sample[i].feedback[1]%></td>
+        <td><%=sample[i].answers[2]%></td>
+        <td><%=sample[i].feedback[2]%></td>
+      </tr>
+        <% } %>
+    </tbody>
+    </table>
+    </div>
+
+</body>
+</html>
